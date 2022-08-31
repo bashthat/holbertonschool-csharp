@@ -1,1 +1,2 @@
-This is the beginning of Learning C# as part of the AR/VR curriculum with HolbertonSchool -- Unity is fun~!
+﻿// See https://aka.ms/new-console-template for more information
+Console.WriteLine("Hello, World!");
