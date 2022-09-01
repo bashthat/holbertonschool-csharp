@@ -3,4 +3,4 @@
 dotnet new console --output 2-new_project
 cd 2-new_project
 dotnet build
-dotnet run --project ./2-new_project
+dotnet run
