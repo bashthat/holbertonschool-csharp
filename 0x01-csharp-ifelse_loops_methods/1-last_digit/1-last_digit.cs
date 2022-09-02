@@ -15,3 +15,4 @@ class Program
         else
             Console.WriteLine("less than 6 and not 0");
     }
+}
