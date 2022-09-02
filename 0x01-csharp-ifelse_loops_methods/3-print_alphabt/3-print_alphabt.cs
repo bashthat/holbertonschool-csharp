@@ -1,17 +1,15 @@
-﻿using System.Collections.Generic;
-using System
-
+﻿using System
+// ALPHABT
 class Program
 {
     static void Main(string[] args)
     {
-        char letter = 'a';
-        while (letter <= 'z')
+        for (char z = 'a'; z <= 'z'; z++)
         {
-            if (letter != 'q' && letter != 'e')
-                Console.Write(letter);
-            letter++;
+            if (z != 'q' && z != 'e')
+            {
+                Console.Write(z);
+            }
         }
-        Console.WriteLine();
     }
 }
