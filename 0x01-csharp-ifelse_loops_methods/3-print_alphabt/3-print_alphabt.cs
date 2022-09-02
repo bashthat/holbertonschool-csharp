@@ -1,2 +1,17 @@
-﻿// See https://aka.ms/new-console-template for more information
-Console.WriteLine("Hello, World!");
+﻿using System.Collections.Generic;
+using System
+
+class Program
+{
+    static void Main(string[] args)
+    {
+        char letter = 'a';
+        while (letter <= 'z')
+        {
+            if (letter != 'q' && letter != 'e')
+                Console.Write(letter);
+            letter++;
+        }
+        Console.WriteLine();
+    }
+}

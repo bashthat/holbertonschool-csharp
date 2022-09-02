@@ -1,2 +1,13 @@
-﻿// See https://aka.ms/new-console-template for more information
-Console.WriteLine("Hello, World!");
+﻿using System;
+
+class Program
+{
+    static void Main(string[] args)
+    {
+        for (int i = 0; i < 99; i++)
+        {
+            Console.Write("{0}, ", i);
+        }
+        Console.WriteLine("99");
+    }
+}

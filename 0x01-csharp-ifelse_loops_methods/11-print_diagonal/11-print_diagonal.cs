@@ -1,2 +1,20 @@
-﻿// See https://aka.ms/new-console-template for more information
-Console.WriteLine("Hello, World!");
+﻿using System;
+using System.Collections.Generic;
+
+class Line
+{
+    public static void PrintDiagonal(int length)
+    {
+        if (length <= 0)
+            Console.WriteLine();
+        else
+        {
+            for (int i = 0; i < length; i++)
+            {
+                for (int j = 0; j < i; j++)
+                    Console.Write(" ");
+                Console.WriteLine("\\");
+            }
+        }
+    }
+}
