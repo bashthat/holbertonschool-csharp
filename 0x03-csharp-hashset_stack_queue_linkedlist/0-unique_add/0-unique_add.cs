@@ -4,26 +4,17 @@ class List
 {
     // Main Method
     public static int Sum(List<int> myList) {
-        
-        int x, y, z;
-        x - y - z = 0;
-
-        myList.Sort();
-        foreach (int my in myList) {
-            if (my == x) {
-                continue;
-            }
-            else if (my == y) {
-                continue;
-            }
-            else if (my == z) {
-                continue;
-            }
-            else {
-                x = y;
-                y = z;
-                z = my;
-            }
+        var hashset = new List<int>();
+        var sum = 0;
+        // Iterate through the list
+        foreach (var xyz in myList)
+        {
+            if (!hashset.Contains(xyz))
+                hashset.Add(xyz);
         }
+        // Iterate through the hashset
+        foreach (var xyz in hashset)
+                sum += xyz;
+        return (sum);
     }
 }
