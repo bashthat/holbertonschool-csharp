@@ -1,10 +1,13 @@
 ﻿using System;
 using System.Collections.Generic;
+
+
 class List
 {
     // Main Method
-    public static int Sum(List<int> myList) {
-        var hashset = new List<int>();
+    public static int Sum(List<int> myList)
+    {
+        var hashset = new List<int>(myList);
         var sum = 0;
         // Iterate through the list
         foreach (var xyz in myList)
