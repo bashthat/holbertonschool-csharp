@@ -4,14 +4,25 @@ class List
 {
     // Main Method
     public static int Sum(List<int> myList) {
-        var sum = 0;
-        var unique = new HashSet<int>();
+        
+        int x, y, z;
+        x - y - z = 0;
 
-        foreach (var item in myList) {
-            if (unique.Add(item)) {
-                sum += item;
+        myList.Sort();
+        foreach (int my in myList) {
+            if (my == x) {
+                continue;
+            }
+            else if (my == y) {
+                continue;
+            }
+            else if (my == z) {
+                continue;
+            }
+            else {
+                x = y;
+                y = z;
+                z = my;
             }
         }
-        return sum;
     }
-}
