@@ -7,17 +7,17 @@ class List
     // Main Method
     public static int Sum(List<int> myList)
     {
-        var hashset = new List<int>(myList);
         var sum = 0;
+        hashset<int> num = new hashset<int>();
         // Iterate through the list
-        foreach (var xyz in myList)
+        foreach (int xyz in myList)
         {
             if (!hashset.Contains(xyz))
-                hashset.Add(xyz);
+                {
+                    hashset.Add(xyz);
+                    sum += xyz;
+                }
         }
-        // Iterate through the hashset
-        foreach (var xyz in hashset)
-                sum += xyz;
         return (sum);
     }
 }
