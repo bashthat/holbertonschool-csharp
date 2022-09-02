@@ -4,12 +4,9 @@ class Program
 {
     static void Main(string[] args)
     {
-        char letter = 'a';
-        while (letter <= 'z')
+        for (char z = 'a'; z <= 'z'; z++)
         {
-            Console.Write(letter);
-            letter++;
+            Console.Write(z);
         }
-        Console.WriteLine();
     }
 }
