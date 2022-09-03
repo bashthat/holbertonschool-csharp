@@ -1,7 +1,7 @@
 ﻿using System.Collections.Generic;
 using System;
 using System.Linq;
-
+// create a matrix of squares
 class Matrix;
 {
     public static int[,] Square(int[,] myMatrix)
@@ -9,7 +9,7 @@ class Matrix;
        
         for (int i = 0; i < myMatrix.GetLength(0); i++) {
             for (int j = 0; j < myMatrix.GetLength(1); j++) {
-                newMatrix[i, j] = myMatrix[i, j] * myMatrix[i, j];
+                myMatrix[i, j] = (int)Math.Pow(myMatrix[i, j], 2);
             }
         }
         return newMatrix;
