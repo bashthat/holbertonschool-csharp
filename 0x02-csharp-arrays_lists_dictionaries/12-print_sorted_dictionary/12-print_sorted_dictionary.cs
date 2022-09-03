@@ -5,9 +5,9 @@ class Dictionary
 {
     public static void PrintSorted(Dictionary<string, string> myDict)
     {
-        foreach (KeyValuePair<string, string> entry in myDict.OrderBy(key => key.Key))
+        var sortedDict = from entry in myDict orderby entry.Key select entry;
+        foreach (KeyValuePair<string, string> entry in sortedDict)
         {
             Console.WriteLine("{0}: {1}", entry.Key, entry.Value);
         }
     }
-}
