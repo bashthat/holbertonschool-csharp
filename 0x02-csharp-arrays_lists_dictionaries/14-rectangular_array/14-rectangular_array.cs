@@ -1,4 +1,5 @@
-﻿using System.Collections.Generic;
+﻿using Internal;
+using System.Collections.Generic;
 using System;
 // class Dictionary<string, string>
 namespace _14_rectangular_array
@@ -9,23 +10,22 @@ namespace _14_rectangular_array
         static void Main(string[] args)
         {
             int[,] myArray = new int[5, 5];
-            for (int i = 0; i < 5; i++)
+            array[2, 2] = 1;
+            for (int i = 0; i < myArray.GetLength; i++)
             {
-                for (int j = 0; j < 5; j++)
+                for (int j = 0; j < myArray.GetLength; j++)
                 {
-                    myArray[i, j] = i * j;
+                    Console.Write(myArray[i, j]);
+                    // myArray[i, j] = i * j;
+                    // Console.Write(myArray[i, j]);
+                    if (j < myArray.GetLength(1) - 1)
+                    {
+                        Console.Write(" ");
+                    } // end
                 }
             } // for (int i = 0; i < 5; i++)
-            for (int i = 0; i < 5; i++)
-            {
-                for (int j = 0; j < 5; j++)
-                { // 0 0 0 0 0
-                    Console.Write(myArray[i, j]);
-                    if (j != 4)
-                        Console.Write(" ");
-                } // end for j
-                Console.WriteLine();
-            }
-        }
-    }
-}
+            Console.WriteLine();
+            //  0 0 0 0 0
+        } // static void Main(string[] args)
+    } // class Program
+} // namespace _14_rectangular_array
