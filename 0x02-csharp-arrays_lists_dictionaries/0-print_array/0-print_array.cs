@@ -7,16 +7,17 @@ Class Array
         if (size < 0) {
             Console.WriteLine("Size cannot be negative");
             return null;
-        }
-        int[] array = new int[size];
+        } // end if
+        int[] xyz = new int[size];
         for (int i = 0; i < size; i++) {
-            array[i] = i;
+            xyz[i] = i;
             if (i == size - 1) {
                 Console.WriteLine(i);
-            } else {
-                Console.Write(i + " ");
+            } else { // end if
+                Console.Write("{0} ", i);
             }
-        }
-        return array;
+        console.WriteLine();
+        return xyz;
     }
+}
 }
