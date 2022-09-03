@@ -1,7 +1,8 @@
 ﻿using System;
-
+// prints array of integers
 Class Array
 {
+    // public static void PrintArray(int[] array)
     public static int[] CreatePrint(int size) {
         if (size < 0) {
             Console.WriteLine("Size cannot be negative");
@@ -18,3 +19,4 @@ Class Array
         }
         return array;
     }
+}
