@@ -1,4 +1,6 @@
 ﻿using System;
+using System.Collections.Generic;
+using System.Linq;
 // prints array of integers
 Class Array
 {
@@ -10,14 +12,13 @@ Class Array
         } // end if
         int[] xyz = new int[size];
         for (int i = 0; i < size; i++) {
+            console.Write{"{0} ", i};
+            if (i != size - 1) {
+                Console.Write(" ");
+            } // end if
             xyz[i] = i;
-            if (i == size - 1) {
-                Console.WriteLine(i);
-            } else { // end if
-                Console.Write("{0} ", i);
-            }
-        console.WriteLine();
+        } // end foreach
+        Console.WriteLine();
         return xyz;
-    }
-}
-}
+    } // end CreatePrint
+} // end class Array
