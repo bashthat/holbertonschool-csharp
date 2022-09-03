@@ -4,28 +4,18 @@ using System;
 // class Dictionary<string, string>
 namespace _14_rectangular_array
 { 
-    class Program
-    // class 
-    { 
-        static void Main(string[] args)
+    class Matrix
+    {
+        public static int[,] Square(int[,] myMatrix)
         {
-            int[,] myArray = new int[5, 5];
-            array[2, 2] = 1;
-            for (int i = 0; i < myArray.GetLength; i++)
+            int[,] newMatrix = new int[myMatrix.GetLength(0), myMatrix.GetLength(1)];
+            for (int i = 0; i < myMatrix.GetLength(0); i++)
             {
-                for (int j = 0; j < myArray.GetLength; j++)
+                for (int j = 0; j < myMatrix.GetLength(1); j++)
                 {
-                    Console.Write(myArray[i, j]);
-                    // myArray[i, j] = i * j;
-                    // Console.Write(myArray[i, j]);
-                    if (j < myArray.GetLength(1) - 1)
-                    {
-                        Console.Write(" ");
-                    } // end
+                    newMatrix[i, j] = myMatrix[i, j] * myMatrix[i, j];
                 }
-            } // for (int i = 0; i < 5; i++)
-            Console.WriteLine();
-            //  0 0 0 0 0
-        } // static void Main(string[] args)
-    } // class Program
-} // namespace _14_rectangular_array
+            }
+            return newMatrix;
+        }
+    }
