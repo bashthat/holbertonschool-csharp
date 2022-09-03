@@ -2,18 +2,19 @@
 
 Class Array
 {
-    public static void Print(int[] array)
-    {
-        for (int i = 0; i < array.Length; i++)
-        {
-            if (i == array.Length - 1)
-            {
-                Console.WriteLine(array[i]);
-            }
-            else
-            {
-                Console.Write(array[i] + " ");
+    public static int[] CreatePrint(int size) {
+        if (size < 0) {
+            Console.WriteLine("Size cannot be negative");
+            return null;
+        }
+        int[] array = new int[size];
+        for (int i = 0; i < size; i++) {
+            array[i] = i;
+            if (i == size - 1) {
+                Console.WriteLine(i);
+            } else {
+                Console.Write(i + " ");
             }
         }
+        return array;
     }
-}
