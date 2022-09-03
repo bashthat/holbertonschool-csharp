@@ -9,7 +9,8 @@ class Dictionary
         var sortedDict = myDict.K.OrderBy(x => x);
         foreach (var k in sorted)
         {
-            Console.WriteLine($"{k.Key}: {k.Value}");
+            Console.WriteLine($"{k}: {myDict[k]}");
+            // return the sorted dictionary
         }
     }
-}
+} // end of class Dictionary
