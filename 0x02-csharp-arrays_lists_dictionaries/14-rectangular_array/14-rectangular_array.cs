@@ -1,16 +1,22 @@
 ﻿using System.Collections.Generic;
 using System;
 
-class Matrix
+namespace _14_rectangular_array
 {
-    public static int[,] Square(int[,] myMatrix)
+    class Program
     {
-        int[,] newMatrix = new int[myMatrix.GetLength(0), myMatrix.GetLength(1)];
-        for (int i = 0; i < myMatrix.GetLength(0); i++) {
-            for (int j = 0; j < myMatrix.GetLength(1); j++) {
-                newMatrix[i, j] = myMatrix[i, j] * myMatrix[i, j];
-            }
+        static void Main(string[] args)
+        {
+            int[,] myArray = new int[3, 3] {{1, 2, 3}, {4, 5, 6}, {7, 8, 9}};
+            Console.WriteLine(myArray[0, 0]);
+            Console.WriteLine(myArray[0, 1]);
+            Console.WriteLine(myArray[0, 2]);
+            Console.WriteLine(myArray[1, 0]);
+            Console.WriteLine(myArray[1, 1]);
+            Console.WriteLine(myArray[1, 2]);
+            Console.WriteLine(myArray[2, 0]);
+            Console.WriteLine(myArray[2, 1]);
+            Console.WriteLine(myArray[2, 2]);
         }
-        return newMatrix;
     }
 }
