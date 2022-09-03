@@ -1,2 +1,15 @@
-﻿// See https://aka.ms/new-console-template for more information
-Console.WriteLine("Hello, World!");
+﻿using System.Collections.Generic;
+using System;
+
+class Array
+{
+    public static int elementAt(int[] array, int index)
+    {
+        if (index < 0 || index >= array.Length)
+        {
+            Console.WriteLine("Index out of range");
+            return -1;
+        }
+        return array[index];
+    }
+}
