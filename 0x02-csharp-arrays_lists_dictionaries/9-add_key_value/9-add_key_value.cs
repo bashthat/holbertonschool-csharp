@@ -5,15 +5,9 @@ using System;
 class Dictionary
 {
     public static Dictionary<string, string> AddKeyValue(Dictionary<string, string> myDict, string key, string value) {
-       if (dsx.ContainsKey(key))
-       // the key
-       {
-           dsx[key] = value;
-       }
-       // the value
-       else
-       {
-           dsx.Add(key, value);
-       }
+        myDict.Add(key, value);
+        myDict.TryGetValue(key, out value);
+        myDict.Remove(key);
+        return myDict;
     }
 }
