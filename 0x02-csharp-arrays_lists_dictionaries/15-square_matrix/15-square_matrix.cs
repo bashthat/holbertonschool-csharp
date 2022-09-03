@@ -3,15 +3,19 @@ using System;
 using System.Linq;
 // create a matrix of squares
 class Matrix;
+
 {
+// public static int[,] Square(int[,] myMatrix)
     public static int[,] Square(int[,] myMatrix)
+    
     {
-       
-        for (int i = 0; i < myMatrix.GetLength(0); i++) {
-            for (int j = 0; j < myMatrix.GetLength(1); j++) {
-                myMatrix[i, j] = (int)Math.Pow(myMatrix[i, j], 2);
+        int[,] newMatrix = new int[myMatrix.GetLength(0), myMatrix.GetLength(1)];
+        for (int zxy = 0; zxy < myMatrix.GetLength(0); zxy++) {
+            for (int xyz = 0; xyz < myMatrix.GetLength(1); xyz++) {
+                newMatrix[zxy, xyz] = myMatrix[zxy, xyz] * myMatrix[zxy, xyz];
             }
         }
+        // return newMatrix;
         return newMatrix;
     }
 }
