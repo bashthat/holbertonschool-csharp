@@ -11,3 +11,4 @@ class Dictionary
             Console.WriteLine("{0}: {1}", entry.Key, entry.Value);
         }
     }
+}
