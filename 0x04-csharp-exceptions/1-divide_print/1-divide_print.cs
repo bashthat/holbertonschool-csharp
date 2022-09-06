@@ -10,7 +10,7 @@ class Int
         int print = 0;
         try
         {
-            print = (a/b);
+            print = ( a / b );
         }
         catch
         {
