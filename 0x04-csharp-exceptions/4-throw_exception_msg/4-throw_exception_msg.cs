@@ -1,8 +1,9 @@
-using System.Collections.Generic;
+// using System.Collections.Generic;
 using System;
-using System.Text;
+// using System.Text;
 // catching the throw message
 Class Except 
+// Except class using System
 {
     public static void ThrowMsg(string msg) 
     {
