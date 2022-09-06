@@ -1,22 +1,23 @@
 using System;
 
-// class Int create an integer
+// class Int
 
 class Int 
 {
-    public static void divide(int a, int b) 
+    public static void divide(int a, int b)
     {
-        print = 0;
-        try 
+        // to print int a or int b given divisibility
+        int print = 0;
+        try
         {
-            print = a / b;
-        } catch (DivideByZeroException) 
+            print = (a/b);
+        }
+        catch
         {
             Console.WriteLine("Cannot divide by zero");
-        } finally 
-        // spacing
+        }
+        finally
         {
             Console.WriteLine("{0} / {1} = {2}", a, b, print);
         }
-    }
-}
+    } // word
