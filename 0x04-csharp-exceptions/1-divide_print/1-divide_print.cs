@@ -7,7 +7,7 @@ class Int {
     // to print int a or int b given divisibility
     int c = 0;
     try {
-      print = (a / b);
+      c = (a / b);
     } catch {
       Console.WriteLine("Cannot divide by zero");
     } finally {
