@@ -5,7 +5,7 @@ using System;
 class Int {
   public static void divide(int a, int b) {
     // to print int a or int b given divisibility
-    int c = 0;
+    
     try {
       c = (a / b);
     } catch {
