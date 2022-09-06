@@ -2,7 +2,7 @@
 using System;
 // using System.Text;
 // catching the throw message
-Class Except 
+class Except 
 // Except class using System
 {
     public static void ThrowMsg(string msg) 
