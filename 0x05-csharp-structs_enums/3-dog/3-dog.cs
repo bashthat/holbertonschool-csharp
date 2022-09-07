@@ -11,15 +11,8 @@ struct Dog
     public string owner;
     public Rating rating;
 
-    // .tostring() override
-
-    public override string ToString()
-    {
-        return String.Format("Dog Name: {0}\nAge: {1}\nOwner: {2}\nRating: {3}", name, age, owner, rating);
-    }
-
     // constructor
-    
+
     public Dog(string name, float age, string owner, Rating rating)
     {
         this.name = name;
@@ -27,13 +20,18 @@ struct Dog
         this.owner = owner;
         this.rating = rating;
     }
-    // define a constructor
-    
+    // override ToString() method
+
+    public override string ToString()
+    {
+        return String.Format($"Dog Name: {name}\nAge: {age}\nOwner: {owner}\nRating: {rating}");
+    }
+
+}    
+// define a new enum called Rating
     enum Rating
     {
         Good,
         Great,
         Excellent
     }
-
-}
