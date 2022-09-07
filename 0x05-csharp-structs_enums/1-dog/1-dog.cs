@@ -10,7 +10,7 @@ struct Dog
     public float age;
     public string owner;
     public Rating rating;
-
+}
     // define a constructor
 
     enum Rating
@@ -19,5 +19,3 @@ struct Dog
         Great,
         Excellent
     }
-
-}

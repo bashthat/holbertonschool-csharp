@@ -21,12 +21,10 @@ struct Dog
         this.rating = rating;
     }
     // define a constructor
-    
+}    
     enum Rating
     {
         Good,
         Great,
         Excellent
     }
-
-}
