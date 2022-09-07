@@ -13,12 +13,11 @@ struct Dog
 
     // define a constructor
 
-    public Dog(string name, float age, string owner, Rating rating)
+    enum Rating
     {
-        this.name = name;
-        this.age = age;
-        this.owner = owner;
-        this.rating = rating;
+        Good,
+        Great,
+        Excellent
     }
 
 }

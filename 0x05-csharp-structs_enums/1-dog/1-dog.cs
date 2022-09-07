@@ -1,2 +1,23 @@
-﻿// See https://aka.ms/new-console-template for more information
-Console.WriteLine("Hello, World!");
+﻿using System.Collections.Generic;
+using System;
+
+// define a new struct called Dog
+
+struct Dog
+{
+    // define public fields
+    public string name;
+    public float age;
+    public string owner;
+    public Rating rating;
+
+    // define a constructor
+
+    enum Rating
+    {
+        Good,
+        Great,
+        Excellent
+    }
+
+}
