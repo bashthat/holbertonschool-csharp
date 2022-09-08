@@ -36,7 +36,7 @@ namespace Enemies
 
         public override string ToString()
         {
-            return $"Zombie Name: {Name} / Total Health: {health}";
+            return ($"Zombie Name: {Name} / Total Health: {GetHealth()}";
         }
         
     }

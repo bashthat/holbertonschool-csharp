@@ -10,7 +10,7 @@ namespace Enemies
 
         /// <summary> private field name.</summary>
         private string name = "(No name)";
-
+	
 
         /// <summary>Initializes a new instance of the <see cref="Zombie"/> class.</summary>
         public Zombie()
@@ -19,7 +19,8 @@ namespace Enemies
         }
     /// <summary>Initializing the new constructor of the <see cref="Zombie"/> class.</summary>
         
-        public Zombie(int value)
+        
+	public Zombie(int value)
         {
             if (value < 0)
             {
@@ -34,8 +35,11 @@ namespace Enemies
         {
             return health;
         }
-        public string Name { get; set; }
-
+        
+	/// <summary> getting and retrieving the set name through the public property Name </summary>
+	public string Name { 
+				get { return name; }
+				set { name = value; }
+	}
 
     }
-}
