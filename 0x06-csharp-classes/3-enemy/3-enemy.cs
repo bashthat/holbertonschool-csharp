@@ -8,7 +8,7 @@ namespace Enemies
         /// <summary> private field health.</summary>
         private int health;
 
-        /// <summary>Initializes the new instance.</summary> <see cref="Zombie"/> class.</summary>
+        /// <summary>Initializes the new instance <see cref="Zombie"/> class.</summary>
         public Zombie()
         {
             health = 0;
