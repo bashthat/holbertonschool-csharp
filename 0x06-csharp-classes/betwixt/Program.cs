@@ -6,7 +6,6 @@ namespace Enemies
     public class Zombie
     {
         /// <summary> private field health.</summary>
-       
         private int health;
 
         /// <summary>Initializes the new instance <see cref="Zombie"/> class.</summary>
@@ -14,12 +13,12 @@ namespace Enemies
         {
             health = 0;
         }
-	
+
         private string name = "(No name)";
         
-    /// <summary>Initializing the new constructor of the <see cref="Zombie"/> class.</summary>
+    	/// <summary>Initializing the new constructor of the <see cref="Zombie"/> class.</summary>
     
-    /// <param name="value"></param>    
+    	/// <param name="value"></param>    
         
 	public Zombie(int value)
         {
@@ -43,10 +42,11 @@ namespace Enemies
 				get { return name; }
 				set { name = value; }
 	}
-
-        public override string ToString()
-        {
-            return ($"Zombie Name: {Name} / Total Health: {GetHealth()}");
-        }
+    public override string ToString()
+    {
+        return "Zombie Name: " + name + " / Total Health: " + health;
+    
     }
 }
+}    
+
