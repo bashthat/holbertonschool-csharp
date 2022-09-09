@@ -2,23 +2,20 @@
 
 namespace Enemies
 {
-    /// <summary>Represents a zombie enemy.</summary>
-    class Zombie
+    /// <summary>Represents a Zombie Class.</summary>
+    public class Zombie
     {
         /// <summary> private field health.</summary>
         private int health;
 
-        /// <summary> private field name.</summary>
-        private string name = "(No name)";
-	
-
-        /// <summary>Initializes a new instance of the <see cref="Zombie"/> class.</summary>
+        /// <summary>Initializes the new instance <see cref="Zombie"/> class.</summary>
         public Zombie()
         {
             health = 0;
         }
     /// <summary>Initializing the new constructor of the <see cref="Zombie"/> class.</summary>
-        
+    
+    /// <param name="value"></param>    
         
 	public Zombie(int value)
         {
@@ -30,16 +27,19 @@ namespace Enemies
             {
                 health = value;
             }
+
         }
-        public int GetHealth()
+        /// <summary>Gets the health of the Zombie</summary>
+	public int GetHealth()
         {
             return health;
         }
-        
-	/// <summary> getting and retrieving the set name through the public property Name </summary>
+        /// <summary> getting and retrieving the set name through the public property Name </summary>
 	public string Name { 
 				get { return name; }
 				set { name = value; }
 	}
 
     }
+
+}
