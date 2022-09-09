@@ -2,8 +2,8 @@
 
 namespace Enemies
 {
-    /// <summary>Represents a zombie enemy.</summary>
-    class Zombie
+    /// <summary>Represents a Zombie Class.</summary>
+    public class Zombie
     {
         /// <summary> private field health.</summary>
         private int health;
@@ -14,8 +14,10 @@ namespace Enemies
             health = 0;
         }
     /// <summary>Initializing the new constructor of the <see cref="Zombie"/> class.</summary>
+    
+    /// <param name="value"></praram>    
         
-        public Zombie(int value)
+	public Zombie(int value)
         {
             if (value < 0)
             {
@@ -26,7 +28,8 @@ namespace Enemies
                 health = value;
             }
         }
-        public int GetHealth()
+        /// <summary>Gets the health of the Zombie</summary>
+	public int GetHealth()
         {
             return health;
         }
