@@ -42,6 +42,7 @@ namespace Enemies
 				get { return name; }
 				set { name = value; }
 	}
+        /// <summary>Overriding the ToString method to print the Zombie object’s attributes to stdout.</summary>
     public override string ToString()
     {
         return "Zombie Name: " + name + " / Total Health: " + health;
