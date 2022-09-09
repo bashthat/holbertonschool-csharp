@@ -2,22 +2,25 @@
 
 namespace Enemies
 {
-    /// <summary>Zombie class aka the enemy.</summary>
-    class Zombie
+    /// <summary>Represents a Zombie Class.</summary>
+    public class Zombie
     {
         /// <summary> private field health.</summary>
         private int health;
-        /// <summary> private field name.</summary>
-        private string name = "(No name)";
 
-        /// <summary>Initializes a new instance of the <see cref="Zombie"/> class.</summary>
+        /// <summary>Initializes the new instance <see cref="Zombie"/> class.</summary>
         public Zombie()
         {
             health = 0;
         }
-    /// <summary>Initializing the new constructor of the <see cref="Zombie"/> class.</summary>
+
+        private string name = "(No name)";
         
-        public Zombie(int value)
+    /// <summary>Initializing the new constructor of the <see cref="Zombie"/> class.</summary>
+    
+    /// <param name="value"></param>    
+        
+	public Zombie(int value)
         {
             if (value < 0)
             {
@@ -27,17 +30,22 @@ namespace Enemies
             {
                 health = value;
             }
+
         }
-        public int GetHealth()
+        /// <summary>Gets the health of the Zombie</summary>
+	public int GetHealth()
         {
             return health;
         }
-        public string Name { get; set; }
+        /// <summary> getting and retrieving the set name through the public property Name </summary>
+	public string Name { 
+				get { return name; }
+				set { name = value; }
+	}
 
         public override string ToString()
         {
             return ($"Zombie Name: {Name} / Total Health: {GetHealth()}";
         }
-        
     }
 }
