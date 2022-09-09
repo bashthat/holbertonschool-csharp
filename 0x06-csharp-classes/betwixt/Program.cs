@@ -48,5 +48,4 @@ namespace Enemies
     
     }
 }
-}    
-
+} // end of namespace Enemies
