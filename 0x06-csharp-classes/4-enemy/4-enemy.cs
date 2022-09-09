@@ -13,6 +13,9 @@ namespace Enemies
         {
             health = 0;
         }
+
+        private string name = "(No name)";
+        
     /// <summary>Initializing the new constructor of the <see cref="Zombie"/> class.</summary>
     
     /// <param name="value"></param>    
