@@ -80,13 +80,7 @@ class Square : Rectangle
         }
     }
     /// <summary>Initializes Class Obj</summary>
-    /// <returns>???nothing!!!</returns>
-    public new int Area()
-    {
-        return size * size;
-    }
-    /// <summary>Initializes Class Obj</summary>
-    /// <returns>???nothing!!!</returns>
+    
     public override string ToString()
     {
         return $"[Square] {size} / {size}";
