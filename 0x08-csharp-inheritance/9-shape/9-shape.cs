@@ -32,8 +32,7 @@ class Rectangle : Shape
                 width = value;
         }
     }
-    /// <summary>Initializes Class Obj</summary>
-    /// <returns>???nothing!!!</returns>
+    
     public int Height
     {
         get { return height; }
@@ -47,8 +46,7 @@ class Rectangle : Shape
                 height = value;
         }
     }
-    /// <summary>Initializes Class Obj</summary>
-    /// <returns>???nothing!!!</returns>
+    
     public new int Area()
     {
         return width * height;
@@ -60,6 +58,7 @@ class Rectangle : Shape
         return $"[Rectangle] {width} / {height}";
     }
 }
+
 /// <summary>Initializes Class Obj</summary>
 /// <returns>???nothing!!!</returns>
 
@@ -77,10 +76,12 @@ class Square : Rectangle
                 throw new ArgumentException("Size must be greater than or equal to 0");
             else
                 size = value;
+                Width = size;
+                Height = size;
         }
     }
     /// <summary>Initializes Class Obj</summary>
-    
+
     public override string ToString()
     {
         return $"[Square] {size} / {size}";
