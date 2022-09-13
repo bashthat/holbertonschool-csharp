@@ -1,4 +1,5 @@
-﻿using System.Reflection.Metadata;
+﻿using System.Reflection.Metadata.Ecma335;
+using System.Reflection.Metadata;
 using System;
 using System.Collections.Generic;
 
@@ -18,7 +19,7 @@ class Shape
     
     }
     /// <summary>Initializes Class Obj</summary>
-    class Rectangle : ArrayShape
+    class Rectangle : Shape 
     {
         private int width;
         private int height;
@@ -35,9 +36,9 @@ class Shape
                     width = value;
             }
         }
-    }
         /// <summary>Initializes Class Obj</summary>
         /// <returns>???nothing!!!</returns>
+        
         public int Height
         {
             get { return height; }
@@ -63,3 +64,4 @@ class Shape
         {
             return $"[Rectangle] {width} / {height}";
         }
+    }
