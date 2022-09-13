@@ -35,6 +35,7 @@ class Shape
                     width = value;
             }
         }
+    }
         /// <summary>Initializes Class Obj</summary>
         /// <returns>???nothing!!!</returns>
         public int Height
@@ -62,5 +63,3 @@ class Shape
         {
             return $"[Rectangle] {width} / {height}";
         }
-
-    }
