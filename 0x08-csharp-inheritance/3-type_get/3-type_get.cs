@@ -19,3 +19,4 @@ class Obj
         foreach (var meth in myObj.GetType().GetMethods())
             Console.WriteLine(meth.Name);
     }
+}
