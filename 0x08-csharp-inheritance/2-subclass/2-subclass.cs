@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Reflection;
 
 /// <summary> Class Obj </summary>
+
 class Obj
 {
     /// <summary> Initializes a new instance of the <see cref="Obj"/> class. </summary>
