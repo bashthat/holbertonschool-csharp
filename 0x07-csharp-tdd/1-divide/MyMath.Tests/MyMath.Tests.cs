@@ -1,8 +1,9 @@
-﻿using NUnit.Framework;
+﻿using System.Buffers;
+using NUnit.Framework;
 using System;
 using System.Collections.Generic;
 
-namespace MyMath.Tests\
+namespace MyMath.Tests
 {
     public class Tests
     {
@@ -14,26 +15,12 @@ namespace MyMath.Tests\
         [Test]
         public void Test1()
         {
-            int[,] matrix = new int[2, 2] { { 1, 2 }, { 3, 4 } };
-            int[,] newMatrix = new int[2, 2] { { 1, 2 }, { 3, 4 } };
-            int[,] r = MyMath.Matrix.Divide(matrix, 1);
-            Assert.AreEqual(newMatrix, r);
-        }
-        [Test]
-        public void Test2()
-        {
-            int[,] matrix = new int[2, 2] { { 1, 2 }, { 3, 4 } };
-            int[,] newMatrix = new int[2, 2] { { 1, 2 }, { 3, 4 } };
-            int[,] r = MyMath.Matrix.Divide(matrix, 1);
-            Assert.AreEqual(newMatrix, r);
-        }
-        [Test]
-        public void Test3()
-        {
-            int[,] matrix = new int[2, 2] { { 1, 2 }, { 3, 4 } };
-            int[,] newMatrix = new int[2, 2] { { 1, 2 }, { 3, 4 } };
-            int[,] r = MyMath.Matrix.Divide(matrix, 1);
-            Assert.AreEqual(newMatrix, r);
+            int input_1 = 7;
+            int input_2 = 3;
+
+            int result = Operations.Add(input_1, input_2);
+
+            Assert.AreEqual(10, result);
         }
     }
 }
