@@ -43,5 +43,30 @@ namespace MyMath.Tests
             Assert.AreEqual(0, result);
         }
 
+        [Test]
+        public void Test4()
+        {
+            int input_1 = 100;
+            int input_2 = 0;
+
+            int result = Operations.Subtract(input_1, input_2);
+
+            Assert.AreEqual(100, result);
+        }
+        [test]
+        public void Test5()
+        {
+            int input_1 = 100;
+            int input_2 = 0;
+
+            int result = Operations.Mod(input_1, input_2);
+
+            Assert.AreEqual(0, result);
+        }
+        catch (System.Exception)
+        {
+            
+            throw;
+        }
     }
 }
