@@ -22,5 +22,26 @@ namespace MyMath.Tests
 
             Assert.AreEqual(10, result);
         }
+        [Test]
+        public void Test2()
+        {
+            int input_1 = 100;
+            int input_2 = 5;
+
+            int result = Operations.Divide(input_1, input_2);
+
+            Assert.AreEqual(20, result);
+        }
+        [Test]
+        public void Test3()
+        {
+            int input_1 = 100;
+            int input_2 = 0;
+
+            int result = Operations.Multiply(input_1, input_2);
+
+            Assert.AreEqual(0, result);
+        }
+
     }
 }
