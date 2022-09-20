@@ -1,7 +1,5 @@
 ﻿using System.Collections.Generic;
 using System;
-using System.Numerics;
-using MathNet.Numerics.LinearAlgebra;
 
 /// <summary> class </summary>
 class VectorMath
