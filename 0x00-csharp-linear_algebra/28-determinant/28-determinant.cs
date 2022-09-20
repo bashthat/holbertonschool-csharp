@@ -43,3 +43,5 @@ class MatrixMath
         }
         else
             return -1;
+    }
+}
