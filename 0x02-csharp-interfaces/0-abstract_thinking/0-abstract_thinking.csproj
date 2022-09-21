@@ -2,6 +2,7 @@
 
   <PropertyGroup>
     <OutputType>Exe</OutputType>
+    <DocumentationFile>bin\$(Configuration)\$(TargetFramework)\$(AssemblyName).xml</DocumentationFile>
     <TargetFramework>net6.0</TargetFramework>
     <RootNamespace>_0_abstract_thinking</RootNamespace>
     <ImplicitUsings>enable</ImplicitUsings>
