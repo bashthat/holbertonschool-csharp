@@ -28,45 +28,34 @@ class Queue<T>
         /// next: must be an object of type Node
         /// </summary>
 
-        public object value = null;
+        public string value = null;
         public Node next = null;
 
-        public object Value
-        {
-            get { return value; }
-            set { this.value = value; }
-        }
+    public Node(string str)
+    {
+        value = str;
     }
-
     /// <summary>
     /// Adds a node to the end of the queue
     /// </summary>
-    /// <returns>The new node</returns>
     
-    public void Enqueue(T value)
+    public void Enqueue(Node node)
     {
-        /// <summary>
-        /// Create a new node
-        /// </summary>
-        
-        Node node = new Node();
-        node.Value = value;
-
         if (head == null)
         {
             head = node;
-            tail = node;
+            return;
         }
-        else
+        Node current = head;
+        while (current.next != null)
         {
-            tail.next = node;
-            tail = node;
+            current = current.next;
         }
-
-        count++;
+        current.next = node;
     }
+    
     /// <summary>Initializes Class Obj</summary>
-    /// <returns>count</returns>
+    /// <returns>counts</returns>
 
     public int Count()
     {
