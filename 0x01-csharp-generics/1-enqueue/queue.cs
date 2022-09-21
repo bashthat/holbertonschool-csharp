@@ -5,7 +5,6 @@
 /// </summary>
 
 class Queue<T>
-
 {
     /// <summary>
     /// Check type of Queue
@@ -16,62 +15,60 @@ class Queue<T>
     {
         return typeof(T);
     }
+}
     
     /// <summary>
-    /// Class Node implementation
+    /// Class Node
     /// </summary>
     
     public class Node
-    
     {
+        /// <summary>
+        /// value: can be of any type,
+        /// next: must be an object of type Node
+        /// </summary>
+
         public object value = null;
         public Node next = null;
 
-        public object value
+        public object Value
         {
-            get; { return value; }
-            set; { this.value = value; }
+            get { return value; }
+            set { this.value = value; }
         }
     }
-        /// <summary>Initializes Class Obj</summary>
-        public Queue()
-        {
-            this.head = null;
-            this.tail = null;
-            this.count = 0;
-        }
-        /// <summary>Initializes Class Obj</summary>
-        public int count()
-        {
-            return this.count;
-        }
-        /// <summary>Initializes Class Obj</summary>
-        public Node head()
-        {
-            return this.head;
-        }
-        /// <summary>Initializes Class Obj</summary>
-        public Node tail()
-        {
-            return this.tail;
-        }
-        /// <summary>Initializes Class Obj</summary>
-        public void Enqueue(T value)
-        {
-            Node new_node = new Node();
-            new_node.value = value;
-            if (this.head == null)
-            {
-                this.head = new_node;
-                this.tail = new_node;
-            }
-            else
-            {
-                this.tail.next = new_node;
-                this.tail = new_node;
-            }
-            this.count++;
-        }
-}
 
+    /// <summary>
+    /// Adds a node to the end of the queue
+    /// </summary>
+    /// <returns>The new node</returns>
     
+    public void Enqueue(T value)
+    {
+        /// <summary>
+        /// Create a new node
+        /// </summary>
+        
+        Node node = new Node();
+        node.Value = value;
+
+        if (head == null)
+        {
+            head = node;
+            tail = node;
+        }
+        else
+        {
+            tail.next = node;
+            tail = node;
+        }
+
+        count++;
+    }
+    /// <summary>Initializes Class Obj</summary>
+    /// <returns>count</returns>
+
+    public int Count()
+    {
+        return count;
+    }
