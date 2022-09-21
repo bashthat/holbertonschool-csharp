@@ -21,50 +21,57 @@ class Queue<T>
     /// Class Node implementation
     /// </summary>
     
-    
     public class Node
+    
     {
-        private T value = default(T);
-        private Node next = null;
+        public object value = null;
+        public Node next = null;
 
-        public Node(T t)
+        public object value
         {
-            value = t;
+            get; { return value; }
+            set; { this.value = value; }
         }
     }
-    public Node head;
-    public Node tail;
-    public int count;
-    
-    
-    /// <summary>
-    /// Method that creates a new Node @Queue.
-    /// </summary>
-    /// <param name="value">Value of the Node</param>
-    
-    public void Enqueue(T value)
-    {
-        Node newNode = new Node(value);
-        if (head == null)
+        /// <summary>Initializes Class Obj</summary>
+        public Queue()
         {
-            head = newNode;
+            this.head = null;
+            this.tail = null;
+            this.count = 0;
         }
-        else
+        /// <summary>Initializes Class Obj</summary>
+        public int count()
         {
-            tail.next = newNode;
+            return this.count;
         }
-        
-        count++;
-    }
-
-    /// <summary>
-    /// add new ndoe to the end of the queue
-    /// </summary>
-    /// <returns>the number of nodes in the queue</returns>
-    
-    public int Count()
-    
-    {
-        return count;
-    }
+        /// <summary>Initializes Class Obj</summary>
+        public Node head()
+        {
+            return this.head;
+        }
+        /// <summary>Initializes Class Obj</summary>
+        public Node tail()
+        {
+            return this.tail;
+        }
+        /// <summary>Initializes Class Obj</summary>
+        public void Enqueue(T value)
+        {
+            Node new_node = new Node();
+            new_node.value = value;
+            if (this.head == null)
+            {
+                this.head = new_node;
+                this.tail = new_node;
+            }
+            else
+            {
+                this.tail.next = new_node;
+                this.tail = new_node;
+            }
+            this.count++;
+        }
 }
+
+    
