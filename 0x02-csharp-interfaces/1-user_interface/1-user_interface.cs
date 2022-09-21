@@ -3,11 +3,11 @@
 /// <summary>Base an abstract class</summary>
 public abstract class Base {
 	/// <summary>Property name</summary>
-	public string name = "";
+	public string name { get; set; }
 
 	/// <summary>Override ToString method</summary>
 	public override string ToString() {
-		return $ "{name} is a {this.GetType()}";
+		return (this.name + "is a" this.GetType().ToString());
 	}
 }
 /// <summary>Interface IInteractive</summary>
