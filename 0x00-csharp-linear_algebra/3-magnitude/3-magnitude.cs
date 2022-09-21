@@ -1,11 +1,11 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Numerics;
-using MathNet.Numerics.LinearAlgebra;
+
 /// <summary> class </summary>
 class VectorMath
 {   
     /// <summary> finding the magnitude </summary>
+    
     
     public static double Magnitude(double[] vector)
     {
