@@ -1,8 +1,7 @@
-﻿using Microsoft.Win32.SafeHandles;
-using System;
+﻿using System;
 
 /// <summary>
-/// Class Queue<T> implementation
+/// Class Queue implementation
 /// </summary>
 
 class Queue<T>
