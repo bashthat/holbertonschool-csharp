@@ -1,15 +1,19 @@
 ﻿using Microsoft.Win32.SafeHandles;
 using System;
 
-namespace Generics
+/// <summary>
+/// Class Queue<T> implementation
+/// </summary>
+
+class Queue<T>
 {
-    /// <summary>Class Queue</summary>
-    public class Queue<T>
+    /// <summary>
+    /// Check type of Queue
+    /// </summary>
+    /// <returns>Queue Type</returns>
+
+    public Type CheckType()
     {
-        /// <summary>Check type of Queue</summary>
-        public Type CheckType()
-        {
-            return typeof(T);
-        }
+        return typeof(T);
     }
 }
