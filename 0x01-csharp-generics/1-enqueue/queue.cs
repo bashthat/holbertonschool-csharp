@@ -5,11 +5,11 @@
 /// </summary>
 
 class Queue<T>
+
 {
     /// <summary>
     /// Check type of Queue
     /// </summary>
-    
     /// <returns>Queue Type</returns>
 
     public Type CheckType()
@@ -20,13 +20,12 @@ class Queue<T>
     /// <summary>
     /// Class Node implementation
     /// </summary>
-    /// <returns>Node</returns>
-
+    
     
     public class Node
     {
-        public T value = default(T);
-        public Node next = null;
+        private T value = default(T);
+        private Node next = null;
 
         public Node(T t)
         {
@@ -35,32 +34,27 @@ class Queue<T>
     }
     public Node head;
     public Node tail;
-    public int standardCount;
+    public int count;
     
     
     /// <summary>
     /// Method that creates a new Node @Queue.
     /// </summary>
-    
     /// <param name="value">Value of the Node</param>
     
-    /// <returns>Node</returns>
-
-
     public void Enqueue(T value)
     {
         Node newNode = new Node(value);
         if (head == null)
         {
             head = newNode;
-            tail = newNode;
         }
         else
         {
             tail.next = newNode;
-            tail = newNode;
         }
-        standardCount++;
+        
+        count++;
     }
 
     /// <summary>
@@ -71,6 +65,6 @@ class Queue<T>
     public int Count()
     
     {
-        return standardCount;
+        return count;
     }
 }
