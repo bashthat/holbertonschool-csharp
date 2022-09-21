@@ -1,2 +1,14 @@
-﻿// See https://aka.ms/new-console-template for more information
-Console.WriteLine("Hello, World!");
+﻿using System;
+
+namespace Generics
+{
+    /// <summary>Class Queue</summary>
+    public class Queue<T>
+    {
+        /// <summary>Check type of Queue</summary>
+        public Type CheckType()
+        {
+            return typeof(T);
+        }
+    }
+}
