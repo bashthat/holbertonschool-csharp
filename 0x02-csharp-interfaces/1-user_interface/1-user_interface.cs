@@ -4,13 +4,14 @@
 public abstract class Base
 {
     /// <summary>Property name</summary>
-    public string name { get; set; }
+    public string name = ""; 
 
     /// <summary>Override ToString method</summary>
     public override string ToString()
     {
         return $"{name} is a {this.GetType()}";
     }
+}
     /// <summary>Interface IInteractive</summary>
     public interface IInteractive
     {
@@ -53,5 +54,3 @@ public abstract class Base
         {
         }
     }
-
-}
