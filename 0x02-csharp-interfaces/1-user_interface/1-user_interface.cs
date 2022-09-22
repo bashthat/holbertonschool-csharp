@@ -1,7 +1,7 @@
 ﻿using System;
 
 /// <summary>Base an abstract class</summary>
-
+/// <returns>Nothing</returns>
 abstract class Base
 {
     
@@ -9,7 +9,8 @@ abstract class Base
     
     public override string ToString()
     {
-        return (name + " is a " + this.GetType());
+
+        return (this.name + " is a " + this.GetType().ToString());
     }
    
 }
