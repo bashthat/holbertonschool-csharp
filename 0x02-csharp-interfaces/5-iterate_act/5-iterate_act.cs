@@ -122,15 +122,15 @@ class RoomObjects {
     {
         foreach (Base object in roomObjects)
         {
-            if (object == typeof(IInteractive) && object is IInteractive)
+            if (object is IInteractive && object.IsAssignableForm(typeOf(IInteractive)))
                 {
                     ((IInteractive)object).Interact();
                 }
-            if (object == typeof(IBreakable) && object is IBreakable)
+            if (object is IBreakable && object.IsAssignableForm(typeOf(IBreakable)))
                 {
                     ((IBreakable)object).Break();
                 }
-            if (object == typeof(ICollectable) && object is ICollectable)
+            if (object is ICollectable && object.IsAssignableForm(typeOf(ICollectable)))
                 {
                     ((ICollectable)object).Collect();
                 }
