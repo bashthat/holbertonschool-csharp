@@ -92,4 +92,25 @@ class Decoration : Base, IInteractive, IBreakable
         else
             Console.WriteLine($"The {name} is already broken.");
     }
+/// <summary>Key class</summary>
+class Key : Base, ICollectable
+{
+    public bool isCollected { get; set; }
+
+    public Key(string name = "Key", bool isCollected = false)
+    {
+        this.name = name;
+        this.isCollected = isCollected;
+    }
+/// <summary>Method Collect</summary>
+    public void Collect()
+    {
+        if (isCollected == false)
+        {
+            isCollected = true;
+            Console.WriteLine($"You pick up the {name}.");
+        }
+        else
+            Console.WriteLine($"You have already picked up the {name}.");
+    }
 }
