@@ -92,6 +92,7 @@ class Decoration : Base, IInteractive, IBreakable
         else
             Console.WriteLine($"The {name} is already broken.");
     }
+}
 /// <summary>Key class</summary>
 class Key : Base, ICollectable
 {
@@ -113,5 +114,4 @@ class Key : Base, ICollectable
         else
             Console.WriteLine($"You have already picked up the {name}.");
     }
-}
 }
