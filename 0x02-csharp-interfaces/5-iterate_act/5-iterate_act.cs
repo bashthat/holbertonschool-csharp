@@ -122,15 +122,15 @@ class RoomObjects {
     {
         foreach (Base object in roomObjects)
         {
-            if (type == typeof(IInteractive) && object is IInteractive)
+            if (object == typeof(IInteractive) && object is IInteractive)
                 {
                     ((IInteractive)object).Interact();
                 }
-            if (type == typeof(IBreakable) && object is IBreakable)
+            if (object == typeof(IBreakable) && object is IBreakable)
                 {
                     ((IBreakable)object).Break();
                 }
-            if (type == typeof(ICollectable) && object is ICollectable)
+            if (object == typeof(ICollectable) && object is ICollectable)
                 {
                     ((ICollectable)object).Collect();
                 }
