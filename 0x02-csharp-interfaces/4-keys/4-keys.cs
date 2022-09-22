@@ -102,15 +102,16 @@ class Key : Base, ICollectable
         this.name = name;
         this.isCollected = isCollected;
     }
-/// <summary>Method Collect</summary>
+
     public void Collect()
     {
-        if (isCollected == false)
+        if (this.isCollected == false)
         {
-            isCollected = true;
+            this.isCollected = true;
             Console.WriteLine($"You pick up the {name}.");
         }
         else
             Console.WriteLine($"You have already picked up the {name}.");
     }
+}
 }
