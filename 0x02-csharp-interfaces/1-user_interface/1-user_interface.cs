@@ -1,19 +1,18 @@
 ﻿using System;
 
 /// <summary>Base an abstract class</summary>
-/// <returns>Nothing</returns>
-abstract class Base
+public abstract class Base
 {
-    
-    public string name = { get; set; }; 
-    
+    /// <summary>Property name</summary>
+    public string name = "";
+
+    /// <summary>Override ToString method</summary>
     public override string ToString()
     {
-
-        return (this.name + " is a " + this.GetType().ToString());
+        return $"{name} is a {this.GetType()}";
     }
-   
 }
+
 
 interface IInteractive
 {
