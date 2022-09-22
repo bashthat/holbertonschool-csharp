@@ -120,19 +120,19 @@ class RoomObjects {
     
     public static void IterateAction(List<Base> roomObjects, Type type)
     {
-        foreach (Base item in roomObjects)
+        foreach (Base object in roomObjects)
         {
-            if (type == typeof(IInteractive) && item is IInteractive)
+            if (type == typeof(IInteractive) && object is IInteractive)
                 {
-                    ((IInteractive)item).Interact();
+                    ((IInteractive)object).Interact();
                 }
-            if (type == typeof(IBreakable) && item is IBreakable)
+            if (type == typeof(IBreakable) && object is IBreakable)
                 {
-                    ((IBreakable)item).Break();
+                    ((IBreakable)object).Break();
                 }
-            if (type == typeof(ICollectable) && item is ICollectable)
+            if (type == typeof(ICollectable) && object is ICollectable)
                 {
-                    ((ICollectable)item).Collect();
+                    ((ICollectable)object).Collect();
                 }
         }
     }
