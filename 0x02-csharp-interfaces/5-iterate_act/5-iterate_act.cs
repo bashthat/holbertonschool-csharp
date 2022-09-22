@@ -117,16 +117,23 @@ class Key : Base, ICollectable
 }
 /// <summary>RoomObjects class</summary>
 class RoomObjects {
-    /// <summary>Iterate through a list of objects and execute methods</summary>
-    public static void IterateAction(List<Base> roomObjects, Type type) {
+    
+    public static void IterateAction(List<Base> roomObjects, Type type)
+    {
         foreach (Base item in roomObjects)
         {
             if (type == typeof(IInteractive) && item is IInteractive)
-                ((IInteractive)item).Interact();
+                {
+                    ((IInteractive)item).Interact();
+                }
             if (type == typeof(IBreakable) && item is IBreakable)
-                ((IBreakable)item).Break();
+                {
+                    ((IBreakable)item).Break();
+                }
             if (type == typeof(ICollectable) && item is ICollectable)
-                ((ICollectable)item).Collect();
+                {
+                    ((ICollectable)item).Collect();
+                }
         }
     }
 }
