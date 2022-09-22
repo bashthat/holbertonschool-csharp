@@ -116,24 +116,19 @@ class Key : Base, ICollectable
     }
 }
 /// <summary>RoomObjects class</summary>
-class RoomObjects {
+class RoomObjects
+{
     
     public static void IterateAction(List<Base> roomObjects, Type type)
     {
-        foreach (Base object in roomObjects)
+        foreach (Base obj in roomObjects)
         {
-            if (object is IInteractive && object.IsAssignableForm(typeOf(IInteractive)))
-                {
-                    ((IInteractive)object).Interact();
-                }
-            if (object is IBreakable && object.IsAssignableForm(typeOf(IBreakable)))
-                {
-                    ((IBreakable)object).Break();
-                }
-            if (object is ICollectable && object.IsAssignableForm(typeOf(ICollectable)))
-                {
-                    ((ICollectable)object).Collect();
-                }
+            if (type == typeof(IInteractive) && obj is IInteractive)
+                ((IInteractive)obj).Interact();
+            if (type == typeof(IBreakable) && obj is IBreakable)
+                ((IBreakable)obj).Break();
+            if (type == typeof(ICollectable) && obj is ICollectable)
+                ((ICollectable)obj).Collect();
         }
     }
 }
