@@ -1,51 +1,55 @@
 ﻿using System;
 
-abstract class Base
+/// <summary>Base an abstract class</summary>
+public abstract class Base
 {
-    /// <summary>
-    /// base class
-    /// </summary>
-    public string name = "" ;
-    public override ToString()
-    {
-    return (this.name + " is a " + this.GetType().Name);
-    }
-}
+    /// <summary>Property name</summary>
+    public string name = "";
 
+    /// <summary>Override ToString method</summary>
+    public override string ToString()
+    {
+        return $"{name} is a {this.GetType()}";
+    }
+    /// <summary> IInteractive </summary>
+}
 interface IInteractive
 {
     void Interact();
 }
-
+/// <summary>IBreakable</summary>
 interface IBreakable
 {
     int durability { get; set; }
     void Break();
 }
-
+/// <summary>ICollectable</summary>
 interface ICollectable
 {
     bool isCollected { get; set; }
     void Collect();
 }
-/// <summary>
-/// test class
-/// </summary>
+/// <summary>TestObject</summary>
 class TestObject : Base, IInteractive, IBreakable, ICollectable
 {
-    public bool isCollected { get; set; }
     public int durability { get; set; }
+    public bool isCollected { get; set; }
+
+/// <summary>Interact</summary>
+
+    public void Interact()
+    {
+    }
+
+/// <summary>Break</summary>
 
     public void Break()
     {
-
     }
-    public void Interact()
-    {
 
-    }
+/// <summary>Collect</summary>
+
     public void Collect()
     {
-
     }
 }
