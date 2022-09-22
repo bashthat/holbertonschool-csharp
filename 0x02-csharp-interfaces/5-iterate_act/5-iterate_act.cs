@@ -116,28 +116,27 @@ class Key : Base, ICollectable
     }
 }
 /// <summary>RoomObjects class</summary>
+
 class RoomObjects
 {
     
     public static void IterateAction(List<Base> roomObjects, Type type)
     {
-        foreach (Base obj in roomObjects)
-        {
-            if (type == typeof(IInteractive))
+    foreach (Base tool in roomObjects)
+    {
+        if (tool is IInteractive && type == typeof(IInteractive))
             {
-                if (obj is IInteractive)
-                    ((IInteractive)obj).Interact();
+                ((IInteractive)tool).Interact();
             }
-            else if (type == typeof(IBreakable))
+        if (tool is IBreakable && type == typeof(IBreakable))
             {
-                if (obj is IBreakable)
-                    ((IBreakable)obj).Break();
+                ((IBreakable)tool).Break();
             }
-            else if (type == typeof(ICollectable))
+        if (tool is ICollectable && type == typeof(ICollectable))
             {
-                if (obj is ICollectable)
-                    ((ICollectable)obj).Collect();
+                ((ICollectable)tool).Collect();
             }
         }
     }
 }
+
