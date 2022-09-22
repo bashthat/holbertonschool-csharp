@@ -116,50 +116,17 @@ class Key : Base, ICollectable
     }
 }
 /// <summary>RoomObjects class</summary>
-class RoomObjects : IInteractive, IBreakable, ICollectable
-{
-    public string name { get; set; }
-    public int durability { get; set; }
-    public bool isCollected { get; set; }
-    public bool isQuestItem { get; set; }
-
-    public RoomObjects(string name = "RoomObjects", int durability = 0, bool isCollected = false, bool isQuestItem = false)
-    {
-        this.name = name;
-        this.durability = durability;
-        this.isCollected = isCollected;
-        this.isQuestItem = isQuestItem;
-    }
-
-    public void Interact()
-    {
-        if (durability <= 0)
-            Console.WriteLine($"The {name} has been broken.");
-        else if (isQuestItem)
-            Console.WriteLine($"You look at the {name}. There's a key inside.");
-        else
-            Console.WriteLine($"You look at the {name}. Not much to see here.");
-    }
-
-    public void Break()
-    {
-        durability--;
-        if (durability > 0)
-            Console.WriteLine($"You hit the {name}. It cracks.");
-        else if (durability == 0)
-            Console.WriteLine($"You smash the {name}. What a mess.");
-        else
-            Console.WriteLine($"The {name} is already broken.");
-    }
-
-    public void Collect()
-    {
-        if (this.isCollected == false)
+class RoomObjects {
+    /// <summary>Iterate through a list of objects and execute methods</summary>
+    public static void IterateAction(List<Base> roomObjects, Type type) {
+        foreach (Base item in roomObjects)
         {
-            this.isCollected = true;
-            Console.WriteLine($"You pick up the {name}.");
+            if (type == typeof(IInteractive) && item is IInteractive)
+                ((IInteractive)item).Interact();
+            if (type == typeof(IBreakable) && item is IBreakable)
+                ((IBreakable)item).Break();
+            if (type == typeof(ICollectable) && item is ICollectable)
+                ((ICollectable)item).Collect();
         }
-        else
-            Console.WriteLine($"You have already picked up the {name}.");
     }
 }
