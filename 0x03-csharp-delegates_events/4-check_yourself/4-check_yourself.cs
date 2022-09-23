@@ -31,10 +31,13 @@ class Player
             Console.WriteLine("maxHp must be greater than 0. maxHp set to 100f by default.");
             maxHp = 100f;
         }
-        this.status = String.Format("{name} is ready to go!"); 
+        this.status = $"{this.name} is ready to go!";
+        
         this.name = name;
         this.maxHp = maxHp;
         this.hp = maxHp;
+
+        HPCheck += CheckStatus;
             }
 
     private void CheckStatus(object sender, CurrentHPArgs e)
