@@ -1,6 +1,9 @@
 ﻿using System;
 using System.Collections.Generic;
-
+/// <summary>
+/// Delegate for calculating health
+/// class Player
+/// </summary>
 class Player
 {
     private string name;
