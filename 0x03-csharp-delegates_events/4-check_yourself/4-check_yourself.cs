@@ -35,8 +35,7 @@ class Player
         this.name = name;
         this.maxHp = maxHp;
         this.hp = maxHp;
-        This.HPcheck += CheckStatus;
-    }
+            }
 
     private void CheckStatus(object sender, CurrentHPArgs e)
     {
