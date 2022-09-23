@@ -36,15 +36,15 @@ class Player
         {
             Console.WriteLine($"{this.name} is in perfect health!");
         }
-        else if (e.currentHp >= (this.maxHp / 2))
+        else if (e.currentHp >= (this.maxHp / 2) && e.currentHp <= (this.maxHp / 2)
         {
             Console.WriteLine($"{this.name} is doing well!");
         }
-        else if (e.currentHp >= (this.maxHp / 4))
+        else if (e.currentHp >= (this.maxHp / 4) && e.currentHp <= (this.maxHp / 4)
         {
             Console.WriteLine($"{this.name} isn't doing too great...");
         }
-        else if (e.currentHp > 0)
+        else if (e.currentHp > 0 && e.currentHp <= this.maxHp / 4) 
         {
             Console.WriteLine($"{this.name} needs help!");
         }
