@@ -75,7 +75,7 @@ class Player
     }
     /// <summary> ValidateHp </summary>
 
-    public void ValidateHP()
+    public void ValidateHP(float newHp)
     {
         if (newHp < 0)
         {
