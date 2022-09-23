@@ -8,14 +8,14 @@ using System.Collections.Generic;
 
 class Player
 {
-
+        
     private string name;
     private float maxHp;
     private float hp;
     /// <summary>Initializes Class Obj</summary>
     /// <param name="name">Name</param>
     /// <param name="maxHp">Max HP</param>
-    
+
     public Player(string name="Player", float maxHp=100f)
     {
         if (maxHp <= 0)
@@ -31,5 +31,35 @@ class Player
     public void PrintHealth()
     {
         Console.WriteLine($"{this.name} has {this.hp} / {this.maxHp} health");
+    }
+
+    /// <summary> deligate Calculates health</summary>
+    /// <param name="damage">Damage</param>
+    public delegate void CalculateHealth(float damage);
+
+    /// <summary>Take Damage</summary>
+    /// <param name="damage">Damage</param>
+    public void TakeDamage(float damage)
+    {
+        if (damage < 0)
+        {
+            console.WriteLine("${this.name} takes 0 damage!");
+        }
+        else
+        {
+            console.WriteLine("${this.name} takes {damage} damage!");
+        }
+        /// <summary>heal damage</summary>
+        public void HealDamage(float heal)
+        {
+            if (heal < 0)
+            {
+                console.WriteLine("${this.name} heals 0 HP!");
+            }
+            else
+            {
+                console.WriteLine("${this.name} heals {heal} HP!");
+            }
+        }
     }
 }
