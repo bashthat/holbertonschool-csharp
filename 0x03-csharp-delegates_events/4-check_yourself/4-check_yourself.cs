@@ -29,23 +29,22 @@ class Player
         this.maxHp = maxHp;
         this.hp = maxHp;
     }
-
-    
-    private void CheckStatus(object sender, CurrentHPArgs e)
+}
+private void CheckStatus(object sender, CurrentHPArgs e)
     {
-        if (e.currentHp == this.maxHp)
+        if (e.currentHp == maxHp)
         {
             Console.WriteLine($"{this.name} is in perfect health!");
         }
-        else if (e.currentHp >= this.maxHp / 2 && e.currentHp < this.maxHp)
+        else if (e.currentHp >= maxHp / 2 && e.currentHp < maxHp)
         {
             Console.WriteLine($"{this.name} is doing well!");
         }
-        else if (e.currentHp >= this.maxHp / 4 && e.currentHp < this.maxHp / 2)
+        else if (e.currentHp >= maxHp / 4 && e.currentHp < maxHp / 2)
         {
             Console.WriteLine($"{this.name} isn't doing too great...");
         }
-        else if (e.currentHp > 0 && e.currentHp < this.maxHp / 4)
+        else if (e.currentHp > 0 && e.currentHp < maxHp / 4)
         {
             Console.WriteLine($"{this.name} needs help!");
         }
@@ -53,7 +52,6 @@ class Player
         {
             Console.WriteLine($"{this.name} is knocked out!");
         }
-
 
     }
     
@@ -139,7 +137,6 @@ class Player
             return baseValue * 1.5f;
         }
     }
-}
 
 /// <summary> Enum health values.</summary>
 
@@ -165,6 +162,6 @@ class CurrentHPArgs : EventArgs
     public readonly float currentHp;
     public CurrentHPArgs(float newHp)
     {
-        currentHp = newHp;
+        this.currentHp = newHp;
     }
 }
