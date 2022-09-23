@@ -3,6 +3,8 @@ using System.Collections.Generic;
 /// <summary>
 /// Delegate for calculating health
 /// </summary>
+/// <param name="amount">Amount to change health by</param>
+
 class Player
 {
     private string name;
@@ -11,6 +13,7 @@ class Player
     /// <summary>
     /// Constructor for Player class
     /// </summary>
+    /// <param name="name">Name of player</param>
     public Player(string name="Player", float maxHp=100f)
     {
         if (maxHp <= 0)
@@ -23,6 +26,7 @@ class Player
         this.hp = maxHp;
     }
     /// <summary>Initializes Class Obj</summary>
+    /// <param name="name">Name of Player</param>
     public void PrintHealth()
     {
         Console.WriteLine($"{this.name} has {this.hp} / {this.maxHp} health");
