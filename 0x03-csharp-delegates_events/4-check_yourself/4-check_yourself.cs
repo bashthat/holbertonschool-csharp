@@ -30,31 +30,7 @@ class Player
         this.hp = maxHp;
     }
 }
-private void CheckStatus(object sender, CurrentHPArgs e)
-    {
-        if (e.currentHp == maxHp)
-        {
-            Console.WriteLine($"{this.name} is in perfect health!");
-        }
-        else if (e.currentHp >= maxHp / 2 && e.currentHp < maxHp)
-        {
-            Console.WriteLine($"{this.name} is doing well!");
-        }
-        else if (e.currentHp >= maxHp / 4 && e.currentHp < maxHp / 2)
-        {
-            Console.WriteLine($"{this.name} isn't doing too great...");
-        }
-        else if (e.currentHp > 0 && e.currentHp < maxHp / 4)
-        {
-            Console.WriteLine($"{this.name} needs help!");
-        }
-        else if (e.currentHp == 0)
-        {
-            Console.WriteLine($"{this.name} is knocked out!");
-        }
 
-    }
-    
     
     /// <summary>Initializes Class Obj</summary>
     public void PrintHealth()
@@ -137,6 +113,32 @@ private void CheckStatus(object sender, CurrentHPArgs e)
             return baseValue * 1.5f;
         }
     }
+
+private void CheckStatus(object sender, CurrentHPArgs e)
+    {
+        if (e.currentHp == maxHp)
+        {
+            Console.WriteLine($"{this.name} is in perfect health!");
+        }
+        else if (e.currentHp >= maxHp / 2 && e.currentHp < maxHp)
+        {
+            Console.WriteLine($"{this.name} is doing well!");
+        }
+        else if (e.currentHp >= maxHp / 4 && e.currentHp < maxHp / 2)
+        {
+            Console.WriteLine($"{this.name} isn't doing too great...");
+        }
+        else if (e.currentHp > 0 && e.currentHp < maxHp / 4)
+        {
+            Console.WriteLine($"{this.name} needs help!");
+        }
+        else if (e.currentHp == 0)
+        {
+            Console.WriteLine($"{this.name} is knocked out!");
+        }
+
+    }
+    
 
 /// <summary> Enum health values.</summary>
 
