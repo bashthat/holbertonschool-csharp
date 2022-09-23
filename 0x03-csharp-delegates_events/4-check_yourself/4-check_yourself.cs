@@ -1,4 +1,8 @@
-﻿using System.Globalization;
+﻿using System.Threading;
+using System.Diagnostics;
+using System.Text;
+using System.Runtime.CompilerServices;
+using System.Globalization;
 using System.Security.AccessControl;
 using System;
 using System.Collections.Generic;
@@ -14,6 +18,8 @@ class Player
     private string name;
     private float maxHp;
     private float hp;
+    private string status;
+
     /// <summary>Initializes Class Obj</summary>
     /// <param name="name">Name</param>
     /// <param name="maxHp">Max HP</param>
@@ -25,13 +31,37 @@ class Player
             Console.WriteLine("maxHp must be greater than 0. maxHp set to 100f by default.");
             maxHp = 100f;
         }
+        this.status = String.Format("{name} is ready to go!"); 
         this.name = name;
         this.maxHp = maxHp;
         this.hp = maxHp;
+        This.HPcheck += CheckStatus;
     }
-}
 
-    
+    private void CheckStatus(object sender, CurrentHPArgs e)
+    {
+        if (e.currentHp == this.maxHp)
+        {
+            Console.WriteLine("{0} is in perfect health!", this.name);
+        }
+        else if (e.currentHp >= this.maxHp / 2 && e.currentHp < this.maxHp)
+        {
+            Console.WriteLine("{0} is doing well!", this.name);
+        }
+        else if (e.currentHp >= this.maxHp / 4 && e.currentHp < this.maxHp / 2)
+        {
+            Console.WriteLine("{0} isn't doing too great...", this.name);
+        }
+        else if (e.currentHp > 0 && e.currentHp < this.maxHp / 4)
+        {
+            Console.WriteLine("{0} needs help!", this.name);
+        }
+        else if (e.currentHp == 0)
+        {
+            Console.WriteLine("{0} is knocked out!", this.name);
+        }
+    }
+
     /// <summary>Initializes Class Obj</summary>
     public void PrintHealth()
     {
@@ -57,10 +87,10 @@ class Player
 
         ValidateHP(newHp);
 
-       
-
-        System.Console.WriteLine($"{name} takes {damage} damage!");
+    System.Console.WriteLine($"{name} takes {damage} damage!");
     }
+
+
     public void HealDamage(float heal)
     {
         if (heal < 0)
@@ -113,32 +143,7 @@ class Player
             return baseValue * 1.5f;
         }
     }
-
-private void CheckStatus(object sender, CurrentHPArgs e)
-    {
-        if (e.currentHp == maxHp)
-        {
-            Console.WriteLine($"{this.name} is in perfect health!");
-        }
-        else if (e.currentHp >= maxHp / 2 && e.currentHp < maxHp)
-        {
-            Console.WriteLine($"{this.name} is doing well!");
-        }
-        else if (e.currentHp >= maxHp / 4 && e.currentHp < maxHp / 2)
-        {
-            Console.WriteLine($"{this.name} isn't doing too great...");
-        }
-        else if (e.currentHp > 0 && e.currentHp < maxHp / 4)
-        {
-            Console.WriteLine($"{this.name} needs help!");
-        }
-        else if (e.currentHp == 0)
-        {
-            Console.WriteLine($"{this.name} is knocked out!");
-        }
-
-    }
-    
+}
 
 /// <summary> Enum health values.</summary>
 
