@@ -1,4 +1,5 @@
-﻿using System;
+﻿using System.Security.AccessControl;
+using System;
 using System.Collections.Generic;
 
 /// <summary>
@@ -46,19 +47,15 @@ class Player
         {
             damage = 0;
         }
-        /// Console.WriteLine($"{this.name} takes {damage} damage!");
-            console.WriteLine("${this.name} takes {damage} damage!");
+        System.Console.WriteLine($"{this.name} takes {damage} damage!");
     }
-     
-        /// <summary>heal damage</summary>
-        public void HealDamage(float heal)
+    public void HealDamage(float heal)
+    {
+        if (heal < 0)
         {
-            if (heal < 0)
-            {
-                heal = 0;
-            }
-            /// heal damage
-                console.WriteLine("${this.name} heals 0 HP!");
-            
+            heal = 0;
         }
+        System.Console.WriteLine($"{this.name} heals {heal} HP!");
     }
+}
+    
