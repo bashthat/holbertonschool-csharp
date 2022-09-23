@@ -35,7 +35,8 @@ class Player
 
     /// <summary> deligate Calculates health</summary>
     /// <param name="damage">Damage</param>
-    public delegate void CalculateHealth(float damage);
+    
+    delegate float CalculateHealth(float damage);
 
     /// <summary>Take Damage</summary>
     /// <param name="damage">Damage</param>
@@ -43,23 +44,21 @@ class Player
     {
         if (damage < 0)
         {
-            console.WriteLine("${this.name} takes 0 damage!");
+            damage = 0;
         }
-        else
-        {
+        /// Console.WriteLine($"{this.name} takes {damage} damage!");
             console.WriteLine("${this.name} takes {damage} damage!");
-        }
+    }
+     
         /// <summary>heal damage</summary>
         public void HealDamage(float heal)
         {
             if (heal < 0)
             {
+                heal = 0;
+            }
+            /// heal damage
                 console.WriteLine("${this.name} heals 0 HP!");
-            }
-            else
-            {
-                console.WriteLine("${this.name} heals {heal} HP!");
-            }
+            
         }
     }
-}
