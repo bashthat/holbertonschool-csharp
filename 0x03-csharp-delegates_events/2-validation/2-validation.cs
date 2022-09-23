@@ -65,7 +65,7 @@ class Player
         }
 
         float newHp = this.hp + heal;
-        /// <summary> validate Hp </summary>
+        
         ValidateHP(newHp);
 
        
