@@ -56,7 +56,7 @@ class Player
 
         /// print damage
 
-        System.Console.WriteLine($"{this.name} takes {damage} damage!");
+        System.Console.WriteLine($"{name} takes {damage} damage!");
     }
     public void HealDamage(float heal)
     {
@@ -70,7 +70,7 @@ class Player
         ValidateHP(newHp);
 
         /// print heal
-        System.Console.WriteLine($"{this.name} heals {heal} HP!");
+        System.Console.WriteLine($"{name} heals {heal} HP!");
 
     }
     /// <summary> ValidateHp </summary>
@@ -80,9 +80,10 @@ class Player
         if (newHp < 0)
         {
             newHp = 0;
-        }   else if (newHp > this.maxHp)
+        }   
+        if (newHp > maxHp)
         {
-            hp = this.maxHp;
+            newHp = maxHp;
         }
         else
         {
