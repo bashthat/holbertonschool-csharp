@@ -89,4 +89,40 @@ class Player
             hp = newHp;
         }
     }
+/// <summary> ApplyModifier class </summary>
+    /// <param name="baseValue">Base Value</param>
+    /// <param name="modifier">Modifier</param>
+    /// <returns>Modifier</returns>
+    public float ApplyModifier(float baseValue, Modifier modifier)
+    {
+        if (modifier == Modifier.Weak)
+        {
+            return baseValue * 0.5f;
+        }
+        else if (modifier == Modifier.Base)
+        {
+            return baseValue;
+        }
+        else
+        {
+            return baseValue * 1.5f;
+        }
+    }
 }
+
+/// <summary> Enum health values.</summary>
+public enum Modifier
+{
+    /// <summary> Weak </summary>
+    Weak,
+    /// <summary> Base </summary>
+    Base,
+    /// <summary> Strong </summary>
+    Strong
+}
+
+/// <summary> Delegate methods for Health values.</summary>
+/// <param name="baseValue">Base Value</param>
+/// <param name="modifier">Modifier</param>
+/// <returns>Modifier</returns>
+public delegate float CalculateModifier(float baseValue, Modifier modifier);
