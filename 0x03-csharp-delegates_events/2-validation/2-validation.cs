@@ -49,12 +49,11 @@ class Player
         }
         float newHp = this.hp - damage;
 
-        /// <summary> Validate HP</summary>
-        /// <param name="newHp">New HP</param>
+        
 
         ValidateHP(newHp);
 
-        /// print damage
+       
 
         System.Console.WriteLine($"{name} takes {damage} damage!");
     }
@@ -69,7 +68,7 @@ class Player
         /// <summary> validate Hp </summary>
         ValidateHP(newHp);
 
-        /// print heal
+       
         System.Console.WriteLine($"{name} heals {heal} HP!");
 
     }
