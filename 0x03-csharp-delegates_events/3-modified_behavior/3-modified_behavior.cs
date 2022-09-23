@@ -93,6 +93,7 @@ class Player
     /// <param name="baseValue">Base Value</param>
     /// <param name="modifier">Modifier</param>
     /// <returns>Modifier</returns>
+    
     public float ApplyModifier(float baseValue, Modifier modifier)
     {
         if (modifier == Modifier.Weak)
@@ -111,6 +112,7 @@ class Player
 }
 
 /// <summary> Enum health values.</summary>
+
 public enum Modifier
 {
     /// <summary> Weak </summary>
@@ -125,4 +127,5 @@ public enum Modifier
 /// <param name="baseValue">Base Value</param>
 /// <param name="modifier">Modifier</param>
 /// <returns>Modifier</returns>
+
 public delegate float CalculateModifier(float baseValue, Modifier modifier);
