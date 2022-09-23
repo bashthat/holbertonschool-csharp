@@ -1,4 +1,5 @@
-﻿using System.Security.AccessControl;
+﻿using System.Globalization;
+using System.Security.AccessControl;
 using System;
 using System.Collections.Generic;
 
@@ -36,19 +37,19 @@ class Player
         {
             Console.WriteLine($"{this.name} is in perfect health!");
         }
-        else if (e.currentHp >= this.maxHp / 2 && e.currentHp <= this.maxHp / 2)
+        else if (e.currentHp >= this.maxHp / 2 && e.currentHp < this.maxHp)
         {
             Console.WriteLine($"{this.name} is doing well!");
         }
-        else if (e.currentHp >= this.maxHp / 4 && e.currentHp <= this.maxHp / 4)
+        else if (e.currentHp >= this.maxHp / 4 && e.currentHp < this.maxHp / 2)
         {
             Console.WriteLine($"{this.name} isn't doing too great...");
         }
-        else if (e.currentHp > 0 && e.currentHp <= this.maxHp / 4) 
+        else if (e.currentHp > 0 && e.currentHp < this.maxHp / 4)
         {
             Console.WriteLine($"{this.name} needs help!");
         }
-        else
+        else if (e.currentHp == 0)
         {
             Console.WriteLine($"{this.name} is knocked out!");
         }
